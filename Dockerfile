@@ -5,8 +5,8 @@
 
 FROM node:13-alpine
 COPY dist /dist
-# RUN npm install pm2 -g
+RUN npm install pm2 -g
 COPY ./server.js ./server.js
 EXPOSE 8080
 
-CMD ["npx", "pm2", "start", "server.js"]
+CMD ["pm2", "start", "server.js"]
