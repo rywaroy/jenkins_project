@@ -22,7 +22,7 @@ app.use(require('koa-static')(__dirname + '/dist'));
 // app.use(proxy(options));
 app.use(koaBody({multipart: true}));
 
-const port = 8080
+const port = 8088
 app.listen(port);
 
 console.log(`listening on port ${port}`);

@@ -6,7 +6,8 @@
 FROM node:13-alpine
 COPY dist /dist
 RUN npm install pm2 -g
+RUN npm install koa koa2-proxy-middleware koa-static koa-body
 COPY ./server.js ./server.js
-EXPOSE 8080
+EXPOSE 8088
 
-CMD ["pm2", "start", "server.js"]
+CMD ["pm2-runtime", "start", "server.js"]
