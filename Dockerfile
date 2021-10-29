@@ -9,4 +9,4 @@ COPY dist /dist
 COPY ./server.js ./server.js
 EXPOSE 8080
 
-CMD ["pm2", "start", "server.js"]
+CMD ["npx", "pm2", "start", "server.js"]
